@@ -1,7 +1,7 @@
 from app import db
 
 class Venue(db.Model):
-    __tablename__ = 'venue'
+    __tablename__ = "venue"
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
@@ -21,7 +21,7 @@ class Venue(db.Model):
         return '<Venue %r>' % self.name
 
 class Artist(db.Model):
-    __tablename__ = 'artist'
+    __tablename__ = "artist"
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
@@ -40,7 +40,7 @@ class Artist(db.Model):
         return '<Artist %r>' % self.name
 
 class Show(db.Model):
-  __tablename__ = 'show'
+  __tablename__ = "show"
 
   id = db.Column(db.Integer, primary_key=True)
   venue_id = db.Column(db.Integer, db.ForeignKey('venue.id'))
